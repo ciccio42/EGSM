@@ -12,27 +12,21 @@
 #include "structures/hashed_trie_manager.h"
 #include "structures/hashed_trie_manager_kernel.h"
 
-
 HashedTrieManager::HashedTrieManager(
-    const Graph& query, 
-    const GraphGPU& query_gpu,
-    const GraphGPU& data,
+    const Graph &query,
+    const GraphGPU &query_gpu,
+    const GraphGPU &data,
     HashedTries &tries)
-: query_(query)
-, q_edges_(NUM_EQ * 2)
+    : query_(query), q_edges_(NUM_EQ * 2)
 
-, h_buffer_()
-, h_num_candidates_(nullptr)
-, h_compacted_vs_sizes_(nullptr)
-, h_num_buckets_(nullptr)
-, h_hash_table_offs_(nullptr)
+      ,
+      h_buffer_(), h_num_candidates_(nullptr), h_compacted_vs_sizes_(nullptr), h_num_buckets_(nullptr), h_hash_table_offs_(nullptr)
 
-, cardinalities_()
+      ,
+      cardinalities_()
 
-, compacted_vs_temp_(nullptr)
-, C_()
-, key_flags_{nullptr, nullptr}
-, neighbor_flags_{nullptr, nullptr}
+      ,
+      compacted_vs_temp_(nullptr), C_(), key_flags_{nullptr, nullptr}, neighbor_flags_{nullptr, nullptr}
 {
     // 1. build q_edges
     uint8_t edge_pos = 0u;
@@ -47,19 +41,19 @@ HashedTrieManager::HashedTrieManager(
     // 2. allocate buffers.
     const uint32_t NUM_TRIES = NUM_EQ * 2 + 1;
     cudaErrorCheck(cudaMalloc(&tries.buffer_, sizeof(uint32_t) * NUM_TRIES * 4));
-    tries.num_candidates_     = tries.buffer_;
-    tries.compacted_vs_sizes_ = tries.num_candidates_       + NUM_TRIES;
-    tries.num_buckets_        = tries.compacted_vs_sizes_   + NUM_TRIES;
-    tries.hash_table_offs_    = tries.num_buckets_          + NUM_TRIES;
+    tries.num_candidates_ = tries.buffer_;
+    tries.compacted_vs_sizes_ = tries.num_candidates_ + NUM_TRIES;
+    tries.num_buckets_ = tries.compacted_vs_sizes_ + NUM_TRIES;
+    tries.hash_table_offs_ = tries.num_buckets_ + NUM_TRIES;
     cudaErrorCheck(cudaMemset(tries.num_candidates_, 0u, sizeof(uint32_t) * NUM_VQ));
 
     cudaErrorCheck(cudaMalloc(&compacted_vs_temp_, sizeof(uint32_t) * MAX_L_FREQ * NUM_EQ * 2));
     cudaErrorCheck(cudaMalloc(&tries.compacted_vs_, sizeof(uint32_t) * MAX_L_FREQ * NUM_EQ * 2));
 
-    h_num_candidates_       = h_buffer_;
-    h_compacted_vs_sizes_   = h_num_candidates_     + NUM_TRIES;
-    h_num_buckets_          = h_compacted_vs_sizes_ + NUM_TRIES;
-    h_hash_table_offs_      = h_num_buckets_        + NUM_TRIES;
+    h_num_candidates_ = h_buffer_;
+    h_compacted_vs_sizes_ = h_num_candidates_ + NUM_TRIES;
+    h_num_buckets_ = h_compacted_vs_sizes_ + NUM_TRIES;
+    h_hash_table_offs_ = h_num_buckets_ + NUM_TRIES;
 
     // 3. construct query nlf.
     uint32_t *query_nlf;
@@ -70,17 +64,16 @@ HashedTrieManager::HashedTrieManager(
 
     for (uint32_t u = 0u; u < NUM_VQ; u++)
     {
-        for (uint32_t offset = query_.offsets_[u]; offset < query_.offsets_[u + 1]; offset ++)
+        for (uint32_t offset = query_.offsets_[u]; offset < query_.offsets_[u + 1]; offset++)
         {
             const uint32_t u_other = query_.neighbors_[offset];
 
-            h_query_nlf[u * NUM_LQ + query_.vlabels_[u_other]] ++;
+            h_query_nlf[u * NUM_LQ + query_.vlabels_[u_other]]++;
         }
     }
     cudaErrorCheck(cudaMemcpy(query_nlf, h_query_nlf, sizeof(uint32_t) * NUM_VQ * NUM_LQ, cudaMemcpyHostToDevice));
 
-
-    // 4. get the candidate vertices for each query vertex. 
+    // 4. get the candidate vertices for each query vertex.
     uint32_t *progress;
     cudaErrorCheck(cudaMalloc(&progress, sizeof(uint32_t) * 3));
     cudaErrorCheck(cudaMemset(progress, 0u, sizeof(uint32_t) * 3));
@@ -93,8 +86,8 @@ HashedTrieManager::HashedTrieManager(
     cudaErrorCheck(cudaDeviceSynchronize());
 
     compareNLF<<<GRID_DIM, BLOCK_DIM>>>(
-        query_gpu, data, query_nlf, 
-        progress, flags, NUM_FLAGS, 
+        query_gpu, data, query_nlf,
+        progress, flags, NUM_FLAGS,
         compacted_vs_temp_, tries.num_candidates_);
     cudaErrorCheck(cudaDeviceSynchronize());
 
@@ -115,7 +108,6 @@ HashedTrieManager::HashedTrieManager(
     }
 
     uint32_t total_size_per_table = h_hash_table_offs_[NUM_EQ * 2];
-
 
     // 6. allocate hash tables
     for (uint32_t i = 0; i < 2; i++)
@@ -141,15 +133,15 @@ HashedTrieManager::HashedTrieManager(
 
         if (finished_built_u.find(u) == finished_built_u.end())
         {
-            do {
+            do
+            {
                 cudaErrorCheck(cudaMemset(progress, 0u, sizeof(uint32_t) * 3));
-                for(uint32_t j = 0; j < 2; j++)
+                for (uint32_t j = 0; j < 2; j++)
                 {
                     cudaErrorCheck(cudaMemset(
-                        tries.keys_[j] + h_hash_table_offs_[i], 
-                        UINT32_MAX, 
-                        sizeof(uint32_t) * h_num_buckets_[i] * BUCKET_DIM
-                    ));
+                        tries.keys_[j] + h_hash_table_offs_[i],
+                        UINT32_MAX,
+                        sizeof(uint32_t) * h_num_buckets_[i] * BUCKET_DIM));
                 }
                 GenerateCs(tries, i, distrib, gen, PRIME);
                 cudaErrorCheck(cudaDeviceSynchronize());
@@ -164,12 +156,10 @@ HashedTrieManager::HashedTrieManager(
                     C_[tries.CIdx(i, 0, 1)],
                     C_[tries.CIdx(i, 1, 0)],
                     C_[tries.CIdx(i, 1, 1)],
-                    progress, 
-                    progress + 2
-                );
+                    progress,
+                    progress + 2);
                 cudaErrorCheck(cudaMemcpy(&success, progress + 2, sizeof(uint32_t), cudaMemcpyDeviceToHost));
-            }
-            while (success != 0u);
+            } while (success != 0u);
             finished_built_u[u] = i;
         }
         else
@@ -183,8 +173,7 @@ HashedTrieManager::HashedTrieManager(
                     tries.keys_[j] + h_hash_table_offs_[i],
                     tries.keys_[j] + h_hash_table_offs_[reference_eidx],
                     sizeof(uint32_t) * h_num_buckets_[reference_eidx] * BUCKET_DIM,
-                    cudaMemcpyDeviceToDevice
-                ));
+                    cudaMemcpyDeviceToDevice));
             }
         }
     }
@@ -206,8 +195,7 @@ HashedTrieManager::HashedTrieManager(
                 progress,
                 tries.keys_[j] + h_hash_table_offs_[i],
                 tries.values_[j] + h_hash_table_offs_[i] * 2,
-                h_num_buckets_[i]
-            );
+                h_num_buckets_[i]);
             cudaErrorCheck(cudaDeviceSynchronize());
         }
     }
@@ -216,25 +204,24 @@ HashedTrieManager::HashedTrieManager(
         void *d_temp_storage = NULL;
         size_t temp_storage_bytes = 0;
         cub::DeviceScan::ExclusiveSum(
-            d_temp_storage, temp_storage_bytes, 
+            d_temp_storage, temp_storage_bytes,
             tries.values_[i],
             tries.values_[i],
             total_size_per_table * 2 + 1);
 
         cudaErrorCheck(cudaMalloc(&d_temp_storage, temp_storage_bytes));
         cub::DeviceScan::ExclusiveSum(
-            d_temp_storage, temp_storage_bytes, 
+            d_temp_storage, temp_storage_bytes,
             tries.values_[i],
             tries.values_[i],
             total_size_per_table * 2 + 1);
         cudaErrorCheck(cudaDeviceSynchronize());
         uint32_t total_nbrs = 0u;
         cudaErrorCheck(cudaMemcpy(
-            &total_nbrs, 
+            &total_nbrs,
             tries.values_[i] + total_size_per_table * 2,
             sizeof(uint32_t),
-            cudaMemcpyDeviceToHost
-        ));
+            cudaMemcpyDeviceToHost));
         cudaErrorCheck(cudaMalloc(&tries.neighbors_[i], sizeof(uint32_t) * total_nbrs));
         cudaErrorCheck(cudaMalloc(&neighbor_flags_[i], sizeof(uint32_t) * total_nbrs));
         cudaErrorCheck(cudaMemset(neighbor_flags_[i], 0u, sizeof(uint32_t) * total_nbrs));
@@ -259,15 +246,14 @@ HashedTrieManager::HashedTrieManager(
                 tries.keys_[j] + h_hash_table_offs_[i],
                 tries.values_[j] + h_hash_table_offs_[i] * 2,
                 h_num_buckets_[i],
-                tries.neighbors_[j]
-            );
+                tries.neighbors_[j]);
             cudaErrorCheck(cudaDeviceSynchronize());
         }
     }
 
     cudaErrorCheck(cudaMemcpy(tries.buffer_, h_buffer_, sizeof(uint32_t) * NUM_TRIES * 4, cudaMemcpyHostToDevice));
     cudaErrorCheck(cudaMemcpyToSymbol(C, C_, sizeof(uint32_t) * MAX_ECOUNT * 2 * 2 * 2));
-    //Print();
+    // Print();
 
     cudaErrorCheck(cudaFree(flags));
     cudaErrorCheck(cudaFree(progress));
@@ -277,10 +263,10 @@ HashedTrieManager::HashedTrieManager(
 void HashedTrieManager::GenerateCs(
     const HashedTries &tries,
     const uint32_t index,
-    std::uniform_int_distribution<uint32_t>& distrib,
-    std::mt19937& gen,
-    const uint32_t PRIME
-) {
+    std::uniform_int_distribution<uint32_t> &distrib,
+    std::mt19937 &gen,
+    const uint32_t PRIME)
+{
     for (uint32_t i = 0; i < 2; i++)
     {
         C_[tries.CIdx(index, i, 0)] = distrib(gen) % PRIME;
@@ -290,10 +276,10 @@ void HashedTrieManager::GenerateCs(
 }
 
 void HashedTrieManager::Filter(
-    HashedTries &tries, 
-    bool filtering_3rd, 
-    uint32_t filtering_order_start_v
-) {
+    HashedTries &tries,
+    bool filtering_3rd,
+    uint32_t filtering_order_start_v)
+{
     if (filtering_3rd)
     {
         uint32_t degeneracy_order[NUM_VQ];
@@ -309,7 +295,7 @@ void HashedTrieManager::Filter(
         {
             computeBFSOrder(query_, degeneracy_order, filtering_order_start_v);
         }
-        
+
         degeneracy_offset[0] = 0u;
         for (uint32_t i = 0; i < NUM_VQ; i++)
         {
@@ -319,10 +305,10 @@ void HashedTrieManager::Filter(
             {
                 uint32_t u_other = degeneracy_order[j];
                 if (std::binary_search(
-                    &query_.neighbors_[query_.offsets_[u]], 
-                    &query_.neighbors_[query_.offsets_[u + 1]], 
-                    u_other
-                )) {
+                        &query_.neighbors_[query_.offsets_[u]],
+                        &query_.neighbors_[query_.offsets_[u + 1]],
+                        u_other))
+                {
                     degeneracy_neighbors[degeneracy_offset[i + 1]++] = u_other;
                 }
             }
@@ -335,7 +321,8 @@ void HashedTrieManager::Filter(
         for (uint32_t i = 0; i < NUM_VQ; i++)
         {
             const uint32_t u = degeneracy_order[i];
-            if (degeneracy_offset[i + 1] - degeneracy_offset[i] <= 1) continue;
+            if (degeneracy_offset[i + 1] - degeneracy_offset[i] <= 1)
+                continue;
 
             for (uint32_t offset = degeneracy_offset[i] + 1; offset < degeneracy_offset[i + 1]; offset++)
             {
@@ -353,8 +340,7 @@ void HashedTrieManager::Filter(
                     EIDX[u * (NUM_VQ) + u_other_pre],
                     EIDX[u * (NUM_VQ) + u_other],
                     EIDX[u_other * (NUM_VQ) + u],
-                    progress
-                );
+                    progress);
                 cudaErrorCheck(cudaDeviceSynchronize());
             }
         }
@@ -362,7 +348,8 @@ void HashedTrieManager::Filter(
         for (long i = NUM_VQ - 1; i >= 0; i--)
         {
             uint32_t u = degeneracy_order[i];
-            if (degeneracy_offset[i + 1] - degeneracy_offset[i] <= 1) continue;
+            if (degeneracy_offset[i + 1] - degeneracy_offset[i] <= 1)
+                continue;
 
             for (long offset = degeneracy_offset[i + 1] - 2; offset >= degeneracy_offset[i]; offset--)
             {
@@ -380,8 +367,7 @@ void HashedTrieManager::Filter(
                     EIDX[u * (NUM_VQ) + u_other_pre],
                     EIDX[u * (NUM_VQ) + u_other],
                     EIDX[u_other * (NUM_VQ) + u],
-                    progress
-                );
+                    progress);
                 cudaErrorCheck(cudaDeviceSynchronize());
             }
         }
@@ -406,22 +392,22 @@ void HashedTrieManager::Filter(
         // compact all candidates in keys to compacted_vs_
         // and update h_compacted_vs_sizes_ and compacted_vs_sizes_
         cudaErrorCheck(cudaDeviceSynchronize());
-        void     *d_temp_storage = NULL;
-        size_t   temp_storage_bytes = 0;
+        void *d_temp_storage = NULL;
+        size_t temp_storage_bytes = 0;
         cub::DeviceSelect::If(
-            d_temp_storage, temp_storage_bytes, 
-            tries.keys_[0] + h_hash_table_offs_[i], 
+            d_temp_storage, temp_storage_bytes,
+            tries.keys_[0] + h_hash_table_offs_[i],
             compacted_vs_temp_ + i * MAX_L_FREQ,
-            num_selected_out_temp + i, 
+            num_selected_out_temp + i,
             h_num_buckets_[i] * BUCKET_DIM, not_uint_max);
         // Allocate temporary storage
         cudaErrorCheck(cudaMalloc(&d_temp_storage, temp_storage_bytes));
         // Run selection
         cub::DeviceSelect::If(
-            d_temp_storage, temp_storage_bytes, 
-            tries.keys_[0] + h_hash_table_offs_[i], 
+            d_temp_storage, temp_storage_bytes,
+            tries.keys_[0] + h_hash_table_offs_[i],
             compacted_vs_temp_ + i * MAX_L_FREQ,
-            num_selected_out_temp + i, 
+            num_selected_out_temp + i,
             h_num_buckets_[i] * BUCKET_DIM, not_uint_max);
         cudaErrorCheck(cudaDeviceSynchronize());
         cudaErrorCheck(cudaFree(d_temp_storage));
@@ -437,22 +423,22 @@ void HashedTrieManager::Filter(
         // compact all candidates in keys to compacted_vs_
         // and update h_compacted_vs_sizes_ and compacted_vs_sizes_
         cudaErrorCheck(cudaDeviceSynchronize());
-        void     *d_temp_storage = NULL;
-        size_t   temp_storage_bytes = 0;
+        void *d_temp_storage = NULL;
+        size_t temp_storage_bytes = 0;
         cub::DeviceSelect::If(
-            d_temp_storage, temp_storage_bytes, 
-            tries.keys_[1] + h_hash_table_offs_[i], 
+            d_temp_storage, temp_storage_bytes,
+            tries.keys_[1] + h_hash_table_offs_[i],
             compacted_vs_temp_ + i * MAX_L_FREQ + h_num_selected_out_temp[i],
-            tries.compacted_vs_sizes_ + i, 
+            tries.compacted_vs_sizes_ + i,
             h_num_buckets_[i] * BUCKET_DIM, not_uint_max);
         // Allocate temporary storage
         cudaErrorCheck(cudaMalloc(&d_temp_storage, temp_storage_bytes));
         // Run selection
         cub::DeviceSelect::If(
-            d_temp_storage, temp_storage_bytes, 
-            tries.keys_[1] + h_hash_table_offs_[i], 
+            d_temp_storage, temp_storage_bytes,
+            tries.keys_[1] + h_hash_table_offs_[i],
             compacted_vs_temp_ + i * MAX_L_FREQ + h_num_selected_out_temp[i],
-            tries.compacted_vs_sizes_ + i, 
+            tries.compacted_vs_sizes_ + i,
             h_num_buckets_[i] * BUCKET_DIM, not_uint_max);
         cudaErrorCheck(cudaDeviceSynchronize());
         cudaErrorCheck(cudaFree(d_temp_storage));
@@ -462,8 +448,7 @@ void HashedTrieManager::Filter(
         tries.compacted_vs_sizes_,
         num_selected_out_temp,
         tries.compacted_vs_sizes_,
-        NUM_EQ * 2
-    );
+        NUM_EQ * 2);
     cudaErrorCheck(cudaMemcpy(
         h_compacted_vs_sizes_, tries.compacted_vs_sizes_,
         sizeof(uint32_t) * NUM_EQ * 2,
@@ -471,20 +456,20 @@ void HashedTrieManager::Filter(
     // sort all compacted_vs
     for (uint32_t i = 0; i < NUM_EQ * 2; i++)
     {
-        void     *d_temp_storage = NULL;
-        size_t   temp_storage_bytes = 0;
+        void *d_temp_storage = NULL;
+        size_t temp_storage_bytes = 0;
         cub::DeviceRadixSort::SortKeys(
-            d_temp_storage, temp_storage_bytes, 
-            compacted_vs_temp_ + i * MAX_L_FREQ, 
-            tries.compacted_vs_ + i * MAX_L_FREQ, 
+            d_temp_storage, temp_storage_bytes,
+            compacted_vs_temp_ + i * MAX_L_FREQ,
+            tries.compacted_vs_ + i * MAX_L_FREQ,
             h_compacted_vs_sizes_[i]);
         // Allocate temporary storage
         cudaErrorCheck(cudaMalloc(&d_temp_storage, temp_storage_bytes));
         // Run sorting operation
         cub::DeviceRadixSort::SortKeys(
-            d_temp_storage, temp_storage_bytes,  
-            compacted_vs_temp_ + i * MAX_L_FREQ, 
-            tries.compacted_vs_ + i * MAX_L_FREQ, 
+            d_temp_storage, temp_storage_bytes,
+            compacted_vs_temp_ + i * MAX_L_FREQ,
+            tries.compacted_vs_ + i * MAX_L_FREQ,
             h_compacted_vs_sizes_[i]);
         cudaErrorCheck(cudaDeviceSynchronize());
         cudaErrorCheck(cudaFree(d_temp_storage));
@@ -522,20 +507,17 @@ void HashedTrieManager::GetCardinalities(const HashedTries &tries)
             uint32_t *num_nbrs;
             cudaErrorCheck(cudaMalloc(&num_nbrs, sizeof(uint32_t) * h_num_buckets_[i] * BUCKET_DIM));
             writeSizesIntoArray<<<h_num_buckets_[i] * BUCKET_DIM / WARP_PER_BLOCK, BLOCK_DIM>>>(
-                tries.values_[j] + h_hash_table_offs_[i] * 2, num_nbrs, h_num_buckets_[i] * BUCKET_DIM
-            );
+                tries.values_[j] + h_hash_table_offs_[i] * 2, num_nbrs, h_num_buckets_[i] * BUCKET_DIM);
             cudaErrorCheck(cudaDeviceSynchronize());
-            void     *d_temp_storage = NULL;
-            size_t   temp_storage_bytes = 0;
+            void *d_temp_storage = NULL;
+            size_t temp_storage_bytes = 0;
             cub::DeviceReduce::Sum(
                 d_temp_storage, temp_storage_bytes,
-                num_nbrs, total, h_num_buckets_[i] * BUCKET_DIM
-            );
+                num_nbrs, total, h_num_buckets_[i] * BUCKET_DIM);
             cudaErrorCheck(cudaMalloc(&d_temp_storage, temp_storage_bytes));
             cub::DeviceReduce::Sum(
                 d_temp_storage, temp_storage_bytes,
-                num_nbrs, total, h_num_buckets_[i] * BUCKET_DIM
-            );
+                num_nbrs, total, h_num_buckets_[i] * BUCKET_DIM);
             cudaErrorCheck(cudaDeviceSynchronize());
 
             cudaErrorCheck(cudaMemcpy(&h_total, total, sizeof(uint32_t), cudaMemcpyDeviceToHost));
@@ -553,11 +535,12 @@ void HashedTrieManager::Print()
     std::cout << "\n# Candidate edges: \n";
     for (uint32_t i = 0; i < NUM_EQ * 2; i++)
     {
-        if (q_edges_[i].first > q_edges_[i].second) continue;
+        if (q_edges_[i].first > q_edges_[i].second)
+            continue;
         std::cout << '(' << q_edges_[i].first << ", " << q_edges_[i].second << "): "
-            << cardinalities_[i] << ' ' 
-            << q_edges_[i].first << ": " << h_compacted_vs_sizes_[i] << ' '
-            << q_edges_[i].second << ": " << h_compacted_vs_sizes_[EIDX[q_edges_[i].second * NUM_VQ + q_edges_[i].first]] << '\n';
+                  << cardinalities_[i] << ' '
+                  << q_edges_[i].first << ": " << h_compacted_vs_sizes_[i] << ' '
+                  << q_edges_[i].second << ": " << h_compacted_vs_sizes_[EIDX[q_edges_[i].second * NUM_VQ + q_edges_[i].first]] << '\n';
     }
     std::cout << '\n';
 }

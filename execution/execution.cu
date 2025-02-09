@@ -11,20 +11,19 @@
 #include "structures/hashed_trie_manager.h"
 #include "processing/join_bfs_dfs.h"
 
-
 void copyConfig(
     const bool adaptive_ordering,
-    const bool load_balancing
-) {
+    const bool load_balancing)
+{
     cudaErrorCheck(cudaMemcpyToSymbol(C_ADAPTIVE_ORDERING, &adaptive_ordering, sizeof(bool)));
     cudaErrorCheck(cudaMemcpyToSymbol(C_LB_ENABLE, &load_balancing, sizeof(bool)));
 }
 
 void copyGraphMeta(
-    const Graph& query_graph,
-    const Graph& data_graph,
-    const GraphUtils& query_utils
-) {
+    const Graph &query_graph,
+    const Graph &data_graph,
+    const GraphUtils &query_utils)
+{
     NUM_VQ = query_graph.vcount_;
     NUM_EQ = query_graph.ecount_;
     NUM_LQ = query_graph.lcount_;
@@ -42,19 +41,19 @@ void copyGraphMeta(
     cudaErrorCheck(cudaDeviceSynchronize());
 }
 
-void copyTries(const HashedTries& hashed_tries)
+void copyTries(const HashedTries &hashed_tries)
 {
     cudaErrorCheck(cudaMemcpyToSymbol(tries, &hashed_tries, sizeof(HashedTries)));
 }
 
 void matchDFSGroup(
-    const HashedTrieManager& manager,
-    Plan& plan,
-    MemPool& pool,
-    PoolElem& res,
-    unsigned long long int& res_size
-) {
-    TIME_INIT();
+    const HashedTrieManager &manager,
+    Plan &plan,
+    MemPool &pool,
+    PoolElem &res,
+    unsigned long long int &res_size)
+{
+    // TIME_INIT();
 
     /*************** initialization ***************/
     // copy constant variables
@@ -87,27 +86,26 @@ void matchDFSGroup(
     cudaErrorCheck(cudaMalloc(&pending_count, sizeof(uint32_t)));
     cudaErrorCheck(cudaMemset(pending_count, 0u, sizeof(uint32_t)));
 
-    TIME_START();
+    // TIME_START();
     joinDFSGroupKernel<<<DIV_CEIL(num_warps, WARP_PER_BLOCK), BLOCK_DIM>>>(
         res, num_warps,
         new_res, pool.capability_, new_res_size,
         initial_order, first_u, first_min_off,
-        num_mapped_vs, true, pending_count, lb_triggered
-    );
+        num_mapped_vs, true, pending_count, lb_triggered);
     cudaErrorCheck(cudaDeviceSynchronize());
-    TIME_END();
-    PRINT_LOCAL_TIME("Finish group " + std::to_string(num_finished_groups));
+    // // TIME_END();
+    // // PRINT_LOCAL_TIME("Finish group " + std::to_string(num_finished_groups));
 
     unsigned long long int h_new_res_size = 0ul;
     cudaErrorCheck(cudaMemcpy(&h_new_res_size, new_res_size, sizeof(unsigned long long int), cudaMemcpyDeviceToHost));
 
-    std::cout << "Group " << num_finished_groups << " # partial results: " << h_new_res_size << std::endl;
+    // std::cout << "Group " << num_finished_groups << " # partial results: " << h_new_res_size << std::endl;
     pool.Push(h_new_res_size * num_mapped_vs);
     res = new_res;
     res_size = h_new_res_size;
 
     plan.AddGroup(num_finished_groups, initial_order);
-    num_finished_groups ++;
+    num_finished_groups++;
 
     /*************** join a group at a time ***************/
 
@@ -120,36 +118,34 @@ void matchDFSGroup(
         num_mapped_vs += popc(plan.masks_[num_finished_groups]);
         h_max_new_res_size = pool.GetFree() / num_mapped_vs;
 
-        TIME_START();
+        // TIME_START();
         joinDFSGroupKernel<<<DIV_CEIL(res_size, WARP_PER_BLOCK), BLOCK_DIM>>>(
             res, res_size,
             new_res, h_max_new_res_size, new_res_size,
             initial_order, UINT8_MAX, UINT8_MAX,
-            num_mapped_vs, true, pending_count, lb_triggered
-        );
+            num_mapped_vs, true, pending_count, lb_triggered);
         cudaErrorCheck(cudaDeviceSynchronize());
-        TIME_END();
+        // TIME_END();
 
         cudaErrorCheck(cudaMemcpy(&h_new_res_size, new_res_size, sizeof(unsigned long long int), cudaMemcpyDeviceToHost));
 
-
         if (h_new_res_size >= static_cast<unsigned long long int>(h_max_new_res_size))
         {
-            PRINT_LOCAL_TIME("Stop group " + std::to_string(num_finished_groups));
+            // PRINT_LOCAL_TIME("Stop group " + std::to_string(num_finished_groups));
             std::cout << "Combine remaining groups." << std::endl;
             break;
         }
-        
+
         pool.Push(h_new_res_size * num_mapped_vs);
         pool.Pop(res_size * old_num_mapped_vs);
         res = new_res;
         res_size = h_new_res_size;
 
         plan.AddGroup(num_finished_groups, initial_order);
-        PRINT_LOCAL_TIME("Finish group " + std::to_string(num_finished_groups));
-        std::cout << "Group " << num_finished_groups << " # partial results: " << h_new_res_size << std::endl;
+        // // PRINT_LOCAL_TIME("Finish group " + std::to_string(num_finished_groups));
+        // std::cout << "Group " << num_finished_groups << " # partial results: " << h_new_res_size << std::endl;
 
-        num_finished_groups ++;
+        num_finished_groups++;
         old_num_mapped_vs = num_mapped_vs;
     }
 
@@ -159,31 +155,30 @@ void matchDFSGroup(
         cudaErrorCheck(cudaMemset(new_res_size, 0u, sizeof(unsigned long long int)));
         cudaErrorCheck(cudaDeviceSynchronize());
 
-        TIME_START();
+        // TIME_START();
         joinDFSGroupKernel<<<DIV_CEIL(res_size, WARP_PER_BLOCK), BLOCK_DIM>>>(
             res, res_size,
             new_res, h_max_new_res_size, new_res_size,
             initial_order, UINT8_MAX, UINT8_MAX,
-            NUM_VQ, false, pending_count, lb_triggered
-        );
+            NUM_VQ, false, pending_count, lb_triggered);
         cudaErrorCheck(cudaDeviceSynchronize());
-        TIME_END();
+        // TIME_END();
 
         cudaErrorCheck(cudaMemcpy(&h_new_res_size, new_res_size, sizeof(unsigned long long int), cudaMemcpyDeviceToHost));
 
-        PRINT_LOCAL_TIME("Finish last group");
+        // PRINT_LOCAL_TIME("Finish last group");
 
-        //pool.push(h_max_new_res_size * num_mapped_vs);
-        //pool.pop(res_size * old_num_mapped_vs);
-        //res = new_res;
+        // pool.push(h_max_new_res_size * num_mapped_vs);
+        // pool.pop(res_size * old_num_mapped_vs);
+        // res = new_res;
         res_size = h_new_res_size;
     }
-    std::cout << '\n';
-    PRINT_TOTAL_TIME("Total join");
+    // std::cout << '\n';
+    // PRINT_TOTAL_TIME("Total join");
 
     uint32_t h_lb_triggered;
     cudaErrorCheck(cudaMemcpy(&h_lb_triggered, lb_triggered, sizeof(uint32_t), cudaMemcpyDeviceToHost));
-    std::cout << "Triggered Load Balancing: " << (h_lb_triggered > 0 ? "true" : "false") << '\n';
+    // std::cout << "Triggered Load Balancing: " << (h_lb_triggered > 0 ? "true" : "false") << '\n';
 
     cudaErrorCheck(cudaFree(lb_triggered));
     cudaErrorCheck(cudaFree(pending_count));

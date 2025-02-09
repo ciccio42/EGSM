@@ -42,8 +42,9 @@ int main(int argc, char** argv) {
 
     /*************** read graph ***************/
     std::unordered_map<uint32_t, uint32_t> label_map;
-
+    // std::cout << "Loading query" << std::endl;
     Graph query_graph(query_path, label_map);
+    // std::cout << "Loading data" << std::endl;
     Graph data_graph(data_path, label_map);
     GraphGPU query_graph_gpu(query_graph);
     GraphGPU data_graph_gpu(data_graph);
@@ -52,24 +53,26 @@ int main(int argc, char** argv) {
 
     copyGraphMeta(query_graph, data_graph, query_utils);
 
+    TIME_INIT();
+    TIME_START();
     /*************** filtering ***************/
     HashedTries hashed_tries {};
 
-    TIME_INIT();
-    TIME_START();
+    // TIME_INIT();
+    // TIME_START();
     HashedTrieManager manager(query_graph, query_graph_gpu, data_graph_gpu, hashed_tries);
-    TIME_END();
-    PRINT_LOCAL_TIME("Build Cuckoo Tries");
+    // TIME_END();
+    // PRINT_LOCAL_TIME("Build Cuckoo Tries");
 
     copyTries(hashed_tries);
 
-    TIME_START();
+    // TIME_START();
     manager.Filter(hashed_tries, filtering_3rd, filtering_order_start_v);
-    TIME_END();
-    PRINT_LOCAL_TIME("Filtering");
+    // TIME_END();
+    // PRINT_LOCAL_TIME("Filtering");
 
     manager.GetCardinalities(hashed_tries);
-    manager.Print();
+    // manager.Print();
 
     manager.Deallocate();
     query_graph_gpu.Deallocate();
@@ -77,24 +80,25 @@ int main(int argc, char** argv) {
 
     Plan plan(query_graph, manager.h_compacted_vs_sizes_, method);
 
-    plan.Print(query_graph);
+    // plan.Print(query_graph);
 
     /*************** memory pool ***************/
     std::cout << '\n';
     MEM_INIT();
-    PRINT_MEM_INFO("Before Allocation");
+    // PRINT_MEM_INFO("Before Allocation");
 
     MemPool pool {};
     pool.Alloc(MAX_RES_MEM_SPACE / sizeof(uint32_t));
     PoolElem res = pool.TryMax();
     unsigned long long int res_size = 0;
 
-    PRINT_MEM_INFO("After allocation");
+    // PRINT_MEM_INFO("After allocation");
     std::cout << std::endl;;
 
     /*************** enumeration ***************/
     matchDFSGroup(manager, plan, pool, res, res_size);
-
+    TIME_END();
+    PRINT_LOCAL_TIME("Matching time: ");
     std::cout << "# Matches: " << res_size << "\nEnd." << std::endl;
 
     pool.Free();
