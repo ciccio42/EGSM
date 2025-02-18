@@ -25,7 +25,7 @@ Graph::Graph(std::string path, std::unordered_map<uint32_t, uint32_t>& label_map
     std::ifstream ifs(path);
     if(ifs.fail())
     {
-        std::cout << "File not exist!\n";
+        std::cout << path << " File not exist!\n";
         exit(-1);
     }
 

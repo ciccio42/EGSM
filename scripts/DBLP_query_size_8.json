@@ -1,0 +1,3581 @@
+{
+    "8": {
+        "0": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.055
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 55,
+                "running_time": 0.017
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 116801,
+                "running_time": 0.019
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 11714867,
+                "running_time": 0.057
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 4079091059,
+                "running_time": 3.658
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 993992552421,
+                "running_time": 3004.262
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "1": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.015
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.041
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 89,
+                "running_time": 0.062
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 8742,
+                "running_time": 0.048
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 2266314,
+                "running_time": 0.198
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 814760619191,
+                "running_time": 1870.926
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "3": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.021
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 577,
+                "running_time": 0.069
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 49185,
+                "running_time": 0.047
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 4827720,
+                "running_time": 0.912
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 1417393533,
+                "running_time": 49.753
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 317153159975,
+                "running_time": 2985.104
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "4": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.026
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 721,
+                "running_time": 0.012
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 273068,
+                "running_time": 0.014
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 17799090,
+                "running_time": 0.047
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 4787090892,
+                "running_time": 3.596
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 914145081441,
+                "running_time": 632.039
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "5": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.091
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 0,
+                "running_time": 0.021
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 0,
+                "running_time": 0.029
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 768,
+                "running_time": 0.048
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 120238,
+                "running_time": 0.672
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 179609829,
+                "running_time": 400.558
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "6": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.043
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 74,
+                "running_time": 0.021
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 9730,
+                "running_time": 0.014
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 4425847,
+                "running_time": 0.023
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 472116703,
+                "running_time": 1.189
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 157317480913,
+                "running_time": 109.506
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "7": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.025
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 3,
+                "running_time": 0.076
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 48355,
+                "running_time": 0.012
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 7477660,
+                "running_time": 0.068
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 2182611086,
+                "running_time": 1.747
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 389861732847,
+                "running_time": 270.589
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "8": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.044
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 578,
+                "running_time": 0.014
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 162516,
+                "running_time": 0.063
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 9791474,
+                "running_time": 0.135
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 1732202387,
+                "running_time": 4.966
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 371365635441,
+                "running_time": 1197.526
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "9": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.052
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.05
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.035
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 2849745,
+                "running_time": 0.65
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 1746794264,
+                "running_time": 56.985
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 507698592147,
+                "running_time": 3218.491
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "10": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.025
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 433,
+                "running_time": 0.071
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 25483,
+                "running_time": 0.018
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 3829216,
+                "running_time": 0.11
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 2167841088,
+                "running_time": 4.68
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 289878624048,
+                "running_time": 1420.805
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "11": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.014
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 2,
+                "running_time": 0.06
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 5162,
+                "running_time": 0.065
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 1897861,
+                "running_time": 0.071
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 548157618,
+                "running_time": 1.693
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 232465338319,
+                "running_time": 1241.129
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "12": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.014
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.028
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 4615,
+                "running_time": 0.018
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 13677718,
+                "running_time": 0.343
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 4789082256,
+                "running_time": 112.9
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 729163872461,
+                "running_time": 2860.493
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "13": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.013
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.031
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 28046,
+                "running_time": 0.019
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 2973598,
+                "running_time": 0.066
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 468517902,
+                "running_time": 0.611
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 329185751161,
+                "running_time": 1710.012
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "14": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.017
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 193,
+                "running_time": 0.022
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 21262,
+                "running_time": 0.088
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 4672962,
+                "running_time": 0.837
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 1049283865,
+                "running_time": 66.941
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 216519736351,
+                "running_time": 1997.428
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "15": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.016
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 2,
+                "running_time": 0.017
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 28538,
+                "running_time": 0.025
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 23077179,
+                "running_time": 0.106
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 2328671486,
+                "running_time": 3.065
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 556195306314,
+                "running_time": 1615.785
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "16": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.048
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 2,
+                "running_time": 0.034
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 3974,
+                "running_time": 0.012
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 3281061,
+                "running_time": 0.026
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 520309836,
+                "running_time": 1.059
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 208881719548,
+                "running_time": 145.075
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "17": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.01
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.011
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 31379,
+                "running_time": 0.012
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 1596128,
+                "running_time": 0.036
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 340954994,
+                "running_time": 0.607
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 270206439391,
+                "running_time": 188.637
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "18": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.011
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.058
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 1393,
+                "running_time": 0.014
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 2045048,
+                "running_time": 0.065
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 724182352,
+                "running_time": 1.118
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 226692875955,
+                "running_time": 157.018
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "19": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.01
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.01
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 47413,
+                "running_time": 0.011
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 21558608,
+                "running_time": 0.059
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 4130505135,
+                "running_time": 3.373
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 1201744188481,
+                "running_time": 836.793
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "21": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.014
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 2,
+                "running_time": 0.082
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 107761,
+                "running_time": 0.045
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 6689931,
+                "running_time": 0.077
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 2777268596,
+                "running_time": 2.14
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 529800595790,
+                "running_time": 366.661
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "22": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.037
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.018
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 2051,
+                "running_time": 0.06
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 3650886,
+                "running_time": 0.63
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 478903056,
+                "running_time": 22.092
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 111793645249,
+                "running_time": 1752.964
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "23": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.025
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 0,
+                "running_time": 0.064
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 3240,
+                "running_time": 0.092
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 3384,
+                "running_time": 0.302
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 415322,
+                "running_time": 0.096
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 92295875,
+                "running_time": 9.439
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "24": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.046
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 242,
+                "running_time": 0.017
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 222266,
+                "running_time": 0.046
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 31631033,
+                "running_time": 0.174
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 4665308309,
+                "running_time": 4.351
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 685218344390,
+                "running_time": 3299.159
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "25": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.017
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 361,
+                "running_time": 0.098
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 226807,
+                "running_time": 0.097
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 29674116,
+                "running_time": 0.344
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 4537571759,
+                "running_time": 74.619
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 1552217387346,
+                "running_time": 2263.021
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "26": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.015
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 578,
+                "running_time": 0.018
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 98786,
+                "running_time": 0.021
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 4431480,
+                "running_time": 0.04
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 1165242869,
+                "running_time": 1.343
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 230153015615,
+                "running_time": 1859.252
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "27": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.032
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 2,
+                "running_time": 0.011
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 24085,
+                "running_time": 0.013
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 1994719,
+                "running_time": 0.016
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 904992114,
+                "running_time": 0.859
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 272826571400,
+                "running_time": 189.122
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "28": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.013
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 865,
+                "running_time": 0.063
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 327525,
+                "running_time": 0.016
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 53997850,
+                "running_time": 0.154
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 7470265094,
+                "running_time": 5.392
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 1058824307709,
+                "running_time": 732.252
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "29": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.025
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.068
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 5421,
+                "running_time": 0.058
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 3291815,
+                "running_time": 0.024
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 550673350,
+                "running_time": 0.608
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 283478005271,
+                "running_time": 196.231
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "30": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.025
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 324,
+                "running_time": 0.059
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 64230,
+                "running_time": 0.135
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 4381913,
+                "running_time": 1.187
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 1481964594,
+                "running_time": 77.688
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 273564814713,
+                "running_time": 2684.505
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "31": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.01
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 13,
+                "running_time": 0.054
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 5978,
+                "running_time": 0.021
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 3634823,
+                "running_time": 0.025
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 403258425,
+                "running_time": 0.969
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 184837337445,
+                "running_time": 128.157
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "32": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.012
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.012
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 1558,
+                "running_time": 0.042
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 844582,
+                "running_time": 0.057
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 223019923,
+                "running_time": 0.646
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 56882157777,
+                "running_time": 39.545
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "33": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.018
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 97,
+                "running_time": 0.019
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 58849,
+                "running_time": 0.042
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 7478004,
+                "running_time": 0.202
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 3724700891,
+                "running_time": 71.713
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 684584930459,
+                "running_time": 1959.561
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "34": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.025
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 2,
+                "running_time": 0.014
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 21650,
+                "running_time": 0.026
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 4834864,
+                "running_time": 0.119
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 1242055601,
+                "running_time": 5.527
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 211879811821,
+                "running_time": 1647.04
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "35": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.015
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 0,
+                "running_time": 0.048
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 177908,
+                "running_time": 0.022
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 11228800,
+                "running_time": 0.121
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 1252051038,
+                "running_time": 1.368
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 453092575534,
+                "running_time": 1768.659
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "36": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.012
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.014
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 41116,
+                "running_time": 0.026
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 11150869,
+                "running_time": 0.038
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 1626534930,
+                "running_time": 1.547
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 306071222355,
+                "running_time": 1576.057
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "37": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.026
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.023
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 243,
+                "running_time": 0.016
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 253374,
+                "running_time": 0.03
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 257804129,
+                "running_time": 0.385
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 103301538783,
+                "running_time": 73.705
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "38": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.028
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.063
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 434,
+                "running_time": 0.024
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 3978,
+                "running_time": 0.099
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 716632,
+                "running_time": 0.128
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 1943001384,
+                "running_time": 462.475
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "39": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.022
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 24,
+                "running_time": 0.025
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 13832,
+                "running_time": 0.051
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 4568,
+                "running_time": 0.192
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 273596804,
+                "running_time": 24.996
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 295244635,
+                "running_time": 2148.72
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "40": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.012
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 264,
+                "running_time": 0.061
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 64414,
+                "running_time": 0.014
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 60996790,
+                "running_time": 0.075
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 8995300738,
+                "running_time": 6.55
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 1587112229842,
+                "running_time": 1097.436
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "41": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.012
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 193,
+                "running_time": 0.024
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 16241,
+                "running_time": 0.014
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 9121684,
+                "running_time": 0.041
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 1270945878,
+                "running_time": 2.069
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 262611379209,
+                "running_time": 181.84
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "42": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.017
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 12,
+                "running_time": 0.071
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 37969,
+                "running_time": 0.019
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 3692397,
+                "running_time": 0.031
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 1766397094,
+                "running_time": 2.862
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 459666203138,
+                "running_time": 318.362
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "43": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.013
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 962,
+                "running_time": 0.058
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 62043,
+                "running_time": 0.061
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 2828701,
+                "running_time": 0.036
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 1937319373,
+                "running_time": 3.341
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 656547943495,
+                "running_time": 454.518
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "44": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.014
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.015
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.015
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 41395,
+                "running_time": 0.017
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 1663365,
+                "running_time": 0.041
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 1208446838,
+                "running_time": 1.754
+            },
+            "2": {
+                "success": 1,
+                "num_sol": 618100527771,
+                "running_time": 428.169
+            }
+        },
+        "45": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.012
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 2,
+                "running_time": 0.095
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 19499,
+                "running_time": 0.049
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 5214687,
+                "running_time": 0.021
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 1247885258,
+                "running_time": 1.251
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 165793849070,
+                "running_time": 114.949
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "46": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.018
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.06
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 12420,
+                "running_time": 0.06
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 10379855,
+                "running_time": 0.166
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 2944998472,
+                "running_time": 6.935
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 358892459915,
+                "running_time": 1681.404
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "47": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.01
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 146,
+                "running_time": 0.011
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 9681,
+                "running_time": 0.069
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 7892558,
+                "running_time": 0.06
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 1759628986,
+                "running_time": 1.541
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 397189851134,
+                "running_time": 275.326
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "48": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.018
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 48,
+                "running_time": 0.054
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 5712,
+                "running_time": 0.058
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 2089500,
+                "running_time": 0.069
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 749961517,
+                "running_time": 3.431
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 133713977437,
+                "running_time": 690.092
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "49": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.068
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.086
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 1200,
+                "running_time": 0.078
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 1024118,
+                "running_time": 0.097
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 862185921,
+                "running_time": 1.214
+            },
+            "4": {
+                "success": 0,
+                "error_info": "Timeout"
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "50": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.012
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 73,
+                "running_time": 0.015
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 5189,
+                "running_time": 0.017
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 3086317,
+                "running_time": 0.161
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 994059047,
+                "running_time": 3.967
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 253921578243,
+                "running_time": 1814.553
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "51": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.021
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.015
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 38883,
+                "running_time": 0.045
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 6414768,
+                "running_time": 0.041
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 1202962951,
+                "running_time": 1.4
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 762249347976,
+                "running_time": 3502.027
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "52": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.028
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.018
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 3600,
+                "running_time": 0.024
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 81776,
+                "running_time": 0.036
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 63947193,
+                "running_time": 0.757
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 96686251714,
+                "running_time": 1495.589
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "53": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.021
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 24,
+                "running_time": 0.035
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 3392,
+                "running_time": 0.029
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 1619562,
+                "running_time": 0.37
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 2426151648,
+                "running_time": 63.793
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 267614205547,
+                "running_time": 2210.708
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "54": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.024
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.012
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 17888,
+                "running_time": 0.015
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 24529259,
+                "running_time": 0.057
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 4906158265,
+                "running_time": 3.898
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 1271883970209,
+                "running_time": 884.697
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "55": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.026
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 93,
+                "running_time": 0.011
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 157691,
+                "running_time": 0.015
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 19543604,
+                "running_time": 0.057
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 5601713932,
+                "running_time": 4.314
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 1386853118857,
+                "running_time": 961.984
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "56": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.01
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.011
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 3085,
+                "running_time": 0.018
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 660440,
+                "running_time": 0.062
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 486629872,
+                "running_time": 0.783
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 155874333847,
+                "running_time": 109.206
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "57": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.01
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 457,
+                "running_time": 0.027
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 27837,
+                "running_time": 0.05
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 2040434,
+                "running_time": 0.034
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 1302195953,
+                "running_time": 1.864
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 315833169652,
+                "running_time": 218.742
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "58": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.041
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 42,
+                "running_time": 0.052
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 3698,
+                "running_time": 0.059
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 976841,
+                "running_time": 0.016
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 330120580,
+                "running_time": 0.483
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 62025256542,
+                "running_time": 44.478
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "59": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.085
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 4,
+                "running_time": 0.028
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 480,
+                "running_time": 0.06
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 6319260,
+                "running_time": 0.776
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 2654556598,
+                "running_time": 83.427
+            },
+            "4": {
+                "success": 0,
+                "error_info": "Timeout"
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "61": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.021
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 0,
+                "running_time": 0.076
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 0,
+                "running_time": 0.026
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 40468,
+                "running_time": 0.065
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 152624,
+                "running_time": 0.43
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 556284,
+                "running_time": 0.894
+            },
+            "2": {
+                "success": 1,
+                "num_sol": 10823972630,
+                "running_time": 226.576
+            }
+        },
+        "62": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.015
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.02
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 22450,
+                "running_time": 0.067
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 5364295,
+                "running_time": 0.147
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 703145921,
+                "running_time": 3.781
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 159785845414,
+                "running_time": 1122.406
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "63": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.073
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 216,
+                "running_time": 0.026
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 21600,
+                "running_time": 0.071
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 7671120,
+                "running_time": 1.929
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 422392941,
+                "running_time": 21.072
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 1928278,
+                "running_time": 88.466
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "64": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.011
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 10,
+                "running_time": 0.013
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 7285,
+                "running_time": 0.049
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 3147464,
+                "running_time": 0.019
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 1158861422,
+                "running_time": 1.081
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 431506939827,
+                "running_time": 298.609
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "65": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.015
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.044
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 28801,
+                "running_time": 0.015
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 23612709,
+                "running_time": 0.114
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 5432957441,
+                "running_time": 3.986
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 1150094717243,
+                "running_time": 795.438
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "66": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.028
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.071
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 6829,
+                "running_time": 0.049
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 3706720,
+                "running_time": 0.059
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 769593298,
+                "running_time": 1.751
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 191217669556,
+                "running_time": 826.368
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "67": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.062
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.031
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 1329,
+                "running_time": 0.058
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 881903,
+                "running_time": 0.052
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 149951667,
+                "running_time": 0.222
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 68262721924,
+                "running_time": 49.227
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "68": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.015
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 2,
+                "running_time": 0.087
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 11904,
+                "running_time": 0.02
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 47770,
+                "running_time": 0.019
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 12805864,
+                "running_time": 0.07
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 206746472,
+                "running_time": 0.615
+            },
+            "2": {
+                "success": 1,
+                "num_sol": 608127767330,
+                "running_time": 2183.421
+            }
+        },
+        "69": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.018
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 2,
+                "running_time": 0.012
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 41226,
+                "running_time": 0.069
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 12831946,
+                "running_time": 0.047
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 2460713301,
+                "running_time": 1.958
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 534502832095,
+                "running_time": 369.899
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "70": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.014
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.041
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 22813,
+                "running_time": 0.024
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 7317819,
+                "running_time": 0.857
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 3679732797,
+                "running_time": 71.66
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 544022121342,
+                "running_time": 1874.622
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "72": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.012
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 4,
+                "running_time": 0.017
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 1190,
+                "running_time": 0.016
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 1044039,
+                "running_time": 0.077
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 703857179,
+                "running_time": 0.713
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 187271600738,
+                "running_time": 130.177
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "73": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.024
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 164,
+                "running_time": 0.057
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 27042,
+                "running_time": 0.067
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 7110739,
+                "running_time": 0.63
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 1579567438,
+                "running_time": 30.589
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 611127438946,
+                "running_time": 2112.944
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "74": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.049
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 2,
+                "running_time": 0.061
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 87186,
+                "running_time": 0.081
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 5539515,
+                "running_time": 0.138
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 1352191523,
+                "running_time": 5.614
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 310558061379,
+                "running_time": 1677.314
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "75": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.024
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 612,
+                "running_time": 0.056
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 53004,
+                "running_time": 0.075
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 6331412,
+                "running_time": 0.622
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 2035361785,
+                "running_time": 54.569
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 401649773842,
+                "running_time": 3016.856
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "76": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.024
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.096
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 5516,
+                "running_time": 0.038
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 762584,
+                "running_time": 0.297
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 95476210,
+                "running_time": 5.795
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 31950618608,
+                "running_time": 384.701
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "77": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.016
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 2,
+                "running_time": 0.024
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 3257,
+                "running_time": 0.021
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 5381855,
+                "running_time": 0.072
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 1365799427,
+                "running_time": 3.115
+            },
+            "4": {
+                "success": 0,
+                "error_info": "Timeout"
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "78": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.014
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 3,
+                "running_time": 0.014
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 6,
+                "running_time": 0.045
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 908027,
+                "running_time": 0.056
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 106048916,
+                "running_time": 0.171
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 53373447677,
+                "running_time": 37.233
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "79": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.01
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.025
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 67097,
+                "running_time": 0.013
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 9618130,
+                "running_time": 0.054
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 1570512406,
+                "running_time": 2.717
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 317931646086,
+                "running_time": 220.236
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "80": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.017
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 2,
+                "running_time": 0.028
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 3666,
+                "running_time": 0.054
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 3253964,
+                "running_time": 0.185
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 440760222,
+                "running_time": 2.662
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 97421634269,
+                "running_time": 812.796
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "81": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.024
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.012
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 482,
+                "running_time": 0.056
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 5088147,
+                "running_time": 0.055
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 4902411687,
+                "running_time": 3.827
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 667129613879,
+                "running_time": 461.357
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "82": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.011
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 25,
+                "running_time": 0.011
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 30254,
+                "running_time": 0.011
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 7843217,
+                "running_time": 0.033
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 3871269279,
+                "running_time": 3.177
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 1461018821754,
+                "running_time": 1013.497
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "83": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.075
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 0,
+                "running_time": 0.021
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 0,
+                "running_time": 0.049
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 1760371,
+                "running_time": 0.095
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 315779027,
+                "running_time": 2.002
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 380280127717,
+                "running_time": 2238.284
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "84": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.011
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 29,
+                "running_time": 0.01
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 7620,
+                "running_time": 0.053
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 1615081,
+                "running_time": 0.111
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 531863820,
+                "running_time": 0.921
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 163674292629,
+                "running_time": 115.366
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "85": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.011
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 2,
+                "running_time": 0.011
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 4971,
+                "running_time": 0.058
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 1087717,
+                "running_time": 0.061
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 886289652,
+                "running_time": 1.29
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 274562100981,
+                "running_time": 191.312
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "86": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.06
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 2,
+                "running_time": 0.016
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 962,
+                "running_time": 0.032
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 988696,
+                "running_time": 0.272
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 770586356,
+                "running_time": 31.472
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 93411036145,
+                "running_time": 1065.874
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "87": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.021
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 870,
+                "running_time": 0.102
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 18774,
+                "running_time": 0.062
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 9817698,
+                "running_time": 0.994
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 1363531648,
+                "running_time": 25.774
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 261228168084,
+                "running_time": 2092.296
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "88": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.038
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.041
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 64,
+                "running_time": 0.056
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 164940,
+                "running_time": 0.05
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 74118486,
+                "running_time": 1.223
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 45190909898,
+                "running_time": 648.274
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "89": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.052
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 241,
+                "running_time": 0.015
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 30053,
+                "running_time": 0.016
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 6165526,
+                "running_time": 0.075
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 2032583828,
+                "running_time": 2.558
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 397888255707,
+                "running_time": 275.421
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "90": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 0,
+                "running_time": 0.02
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 0,
+                "running_time": 0.015
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 0,
+                "running_time": 0.015
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 0,
+                "running_time": 0.03
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 0,
+                "running_time": 0.131
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 0,
+                "running_time": 0.033
+            },
+            "2": {
+                "success": 1,
+                "num_sol": 0,
+                "running_time": 0.1
+            }
+        },
+        "91": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.025
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.052
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 22,
+                "running_time": 0.033
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 13299,
+                "running_time": 0.015
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 5561399,
+                "running_time": 0.148
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 1837089485,
+                "running_time": 1.595
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "92": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.042
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.011
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 18899,
+                "running_time": 0.013
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 5835030,
+                "running_time": 0.061
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 1340457622,
+                "running_time": 1.125
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 413972995639,
+                "running_time": 286.78
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "93": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.07
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.014
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 7,
+                "running_time": 0.048
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 364560,
+                "running_time": 0.028
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 184374300,
+                "running_time": 0.501
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 96002684565,
+                "running_time": 69.052
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "94": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.011
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 9,
+                "running_time": 0.012
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 6902,
+                "running_time": 0.054
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 2467062,
+                "running_time": 0.062
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 833792085,
+                "running_time": 0.819
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 203036177233,
+                "running_time": 140.876
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "95": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.012
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 3,
+                "running_time": 0.035
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 2828,
+                "running_time": 0.015
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 3443630,
+                "running_time": 0.027
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 1416174924,
+                "running_time": 2.392
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 249583932644,
+                "running_time": 173.026
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "96": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.052
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 2,
+                "running_time": 0.047
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 2208,
+                "running_time": 0.027
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 1946268,
+                "running_time": 0.375
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 700553040,
+                "running_time": 28.196
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 352210478913,
+                "running_time": 2034.708
+            },
+            "2": {
+                "success": 0,
+                "error_info": "GPUassert: an illegal memory access was encountered /graph-matching-analysis/baseline_algorithms/EGSM/execution/execution.cu 164\n"
+            }
+        },
+        "97": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.016
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 12,
+                "running_time": 0.056
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 15980,
+                "running_time": 0.028
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 6633096,
+                "running_time": 0.048
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 1507013227,
+                "running_time": 1.661
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 293031090384,
+                "running_time": 2169.516
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "98": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.01
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.021
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 13064,
+                "running_time": 0.011
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 16973087,
+                "running_time": 0.032
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 2507968078,
+                "running_time": 1.983
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 1186501865032,
+                "running_time": 820.403
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "99": {
+            "original_labels": {
+                "success": 1,
+                "num_sol": 1,
+                "running_time": 0.022
+            },
+            "64": {
+                "success": 1,
+                "num_sol": 2,
+                "running_time": 0.054
+            },
+            "32": {
+                "success": 1,
+                "num_sol": 5568,
+                "running_time": 0.026
+            },
+            "16": {
+                "success": 1,
+                "num_sol": 2119690,
+                "running_time": 0.241
+            },
+            "8": {
+                "success": 1,
+                "num_sol": 875115548,
+                "running_time": 26.505
+            },
+            "4": {
+                "success": 1,
+                "num_sol": 271057641451,
+                "running_time": 1937.721
+            },
+            "2": {
+                "success": 0,
+                "error_info": "Timeout"
+            }
+        },
+        "2": {
+            "original_labels": {
+                "success": 0,
+                "error_info": ""
+            },
+            "64": {
+                "success": 0,
+                "error_info": ""
+            },
+            "32": {
+                "success": 0,
+                "error_info": ""
+            },
+            "16": {
+                "success": 0,
+                "error_info": ""
+            },
+            "8": {
+                "success": 0,
+                "error_info": ""
+            },
+            "4": {
+                "success": 0,
+                "error_info": ""
+            },
+            "2": {
+                "success": 0,
+                "error_info": ""
+            }
+        },
+        "20": {
+            "original_labels": {
+                "success": 0,
+                "error_info": ""
+            },
+            "64": {
+                "success": 0,
+                "error_info": ""
+            },
+            "32": {
+                "success": 0,
+                "error_info": ""
+            },
+            "16": {
+                "success": 0,
+                "error_info": ""
+            },
+            "8": {
+                "success": 0,
+                "error_info": ""
+            },
+            "4": {
+                "success": 0,
+                "error_info": ""
+            },
+            "2": {
+                "success": 0,
+                "error_info": ""
+            }
+        },
+        "60": {
+            "original_labels": {
+                "success": 0,
+                "error_info": ""
+            },
+            "64": {
+                "success": 0,
+                "error_info": ""
+            },
+            "32": {
+                "success": 0,
+                "error_info": ""
+            },
+            "16": {
+                "success": 0,
+                "error_info": ""
+            },
+            "8": {
+                "success": 0,
+                "error_info": ""
+            },
+            "4": {
+                "success": 0,
+                "error_info": ""
+            },
+            "2": {
+                "success": 0,
+                "error_info": ""
+            }
+        },
+        "71": {
+            "original_labels": {
+                "success": 0,
+                "error_info": ""
+            },
+            "64": {
+                "success": 0,
+                "error_info": ""
+            },
+            "32": {
+                "success": 0,
+                "error_info": ""
+            },
+            "16": {
+                "success": 0,
+                "error_info": ""
+            },
+            "8": {
+                "success": 0,
+                "error_info": ""
+            },
+            "4": {
+                "success": 0,
+                "error_info": ""
+            },
+            "2": {
+                "success": 0,
+                "error_info": ""
+            }
+        }
+    }
+}
